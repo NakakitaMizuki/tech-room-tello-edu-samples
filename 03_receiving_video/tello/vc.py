@@ -60,8 +60,12 @@ print('start cap')
 while True:
     try:
         ret, frame = cap.read()
+        ###>
+        print('bat')
+        cv2.waitKey(1)
+        ###<
         if ret:
-            cv2.imshow('tello', cv2.resize(frame, (360, 240)))
+            cv2.imshow('tello', cv2.resize(frame, (720, 480)))
             cv2.waitKey(1)
     except KeyboardInterrupt:
         cv2.destroyAllWindows()
